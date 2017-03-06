@@ -1,0 +1,2 @@
+/home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-ar qc libspi.a  CMakeFiles/spi.dir/Simulate.c.obj CMakeFiles/spi.dir/Internal.c.obj CMakeFiles/spi.dir/Slave.c.obj CMakeFiles/spi.dir/Spi.c.obj CMakeFiles/spi.dir/Quad.c.obj
+/home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-ranlib libspi.a

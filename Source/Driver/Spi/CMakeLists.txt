@@ -1,0 +1,7 @@
+AUX_SOURCE_DIRECTORY(. SPI_SRC)
+
+ADD_LIBRARY(spi 
+	${SPI_SRC} 
+)
+
+

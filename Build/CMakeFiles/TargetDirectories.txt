@@ -1,0 +1,17 @@
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles/seeing_mcu_esw.bin.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles/seeing_mcu_esw.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/System/CMakeFiles/freertos.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Middleware/LwipV141/CMakeFiles/lwip.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Driver/Chip/Analog/CMakeFiles/analog.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles/seeing_mcu_esw.hex.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Driver/Spi/CMakeFiles/spi.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Common/CMakeFiles/common.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Application/CMakeFiles/application.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Driver/Chip/Storage/CMakeFiles/storage.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Driver/Fpga/CMakeFiles/fpga.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Driver/Gpio/CMakeFiles/gpio.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Driver/Ethernet/CMakeFiles/ethernet.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Driver/Uart/CMakeFiles/uart.dir
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Driver/I2c/CMakeFiles/i2c.dir

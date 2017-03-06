@@ -1,0 +1,7 @@
+AUX_SOURCE_DIRECTORY(. FPGA_SRC)
+
+ADD_LIBRARY(fpga 
+	${FPGA_SRC} 
+)
+
+

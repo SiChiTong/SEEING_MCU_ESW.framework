@@ -1,0 +1,2 @@
+/home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-ar qc libi2c.a  CMakeFiles/i2c.dir/Simulate.c.obj CMakeFiles/i2c.dir/Internal.c.obj CMakeFiles/i2c.dir/I2c.c.obj
+/home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-ranlib libi2c.a

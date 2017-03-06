@@ -1,0 +1,2 @@
+/home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-ar qc libstorage.a  CMakeFiles/storage.dir/E2prom/At24cxx.c.obj CMakeFiles/storage.dir/E2prom/Cat24cxx.c.obj CMakeFiles/storage.dir/Flash/W25x.c.obj
+/home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-ranlib libstorage.a

@@ -1,0 +1,7 @@
+AUX_SOURCE_DIRECTORY(. I2C_SRC)
+
+ADD_LIBRARY(i2c 
+	${I2C_SRC} 
+)
+
+

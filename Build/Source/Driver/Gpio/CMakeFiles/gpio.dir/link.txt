@@ -1,0 +1,2 @@
+/home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-ar qc libgpio.a  CMakeFiles/gpio.dir/Gpio.c.obj
+/home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-ranlib libgpio.a

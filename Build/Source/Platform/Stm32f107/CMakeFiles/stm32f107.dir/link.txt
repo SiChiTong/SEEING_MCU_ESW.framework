@@ -1,0 +1,2 @@
+/home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-ar qc libstm32f107.a  CMakeFiles/stm32f107.dir/Interrupt/Systick.c.obj CMakeFiles/stm32f107.dir/Interrupt/Default.c.obj CMakeFiles/stm32f107.dir/Interrupt/Faults.c.obj CMakeFiles/stm32f107.dir/Peripherals/Uart/Uart1.c.obj CMakeFiles/stm32f107.dir/Peripherals/Spi/Spi2Slave.c.obj CMakeFiles/stm32f107.dir/Peripherals/Timer/Timer5.c.obj
+/home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-ranlib libstm32f107.a

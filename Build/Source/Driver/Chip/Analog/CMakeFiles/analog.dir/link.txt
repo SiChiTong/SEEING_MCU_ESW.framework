@@ -1,0 +1,2 @@
+/home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-ar qc libanalog.a  CMakeFiles/analog.dir/Adc/Ad7175.c.obj CMakeFiles/analog.dir/Adc/Ad760x.c.obj CMakeFiles/analog.dir/Dac/Ad56x7.c.obj CMakeFiles/analog.dir/Other/Ad5272.c.obj
+/home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-ranlib libanalog.a

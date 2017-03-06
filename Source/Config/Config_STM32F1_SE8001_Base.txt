@@ -1,0 +1,136 @@
+/*	Config Soc platform	*/
+//#define CONFIG_USING_STM32F407
+#define CONFIG_USING_STM32F107
+//#define CONFIG_USING_NXP4357_M0CORE
+//#define CONFIG_USING_NXP4357_M4CORE
+
+/*	Config SPI peripheral number	*/
+#define CONFIG_MAX_SPI_PERIPHERALS					4
+
+/*	Config I2C peripheral number	*/
+#define CONFIG_MAX_I2C_PERIPHERALS					4
+
+/*	Config GPIO number	*/
+#define CONFIG_MAX_USER_GPIO_PINS					32
+
+/*	Config UART number	*/
+#define CONFIG_MAX_UART_PORTS						2
+
+/*	Config FPGA ROM downloading timeout	*/
+#define CONFIG_FPGA_DOWNLOAD_TIMEOUT				512
+
+/*	Config SPI slave peripheral number	*/
+#define CONFIG_MAX_SPI_SLAVE_CHANNELS				2
+
+#define CONFIG_MAX_SPI_SLAVE_REGISTERS				32
+
+/*	Config access locks	*/
+#define CONFIG_SPI_MUTEX
+#define CONFIG_I2C_MUTEX
+
+/*
+ * Command Line configurations
+ */
+#define CONFIG_TERMINAL_COMMAND_LENGTH				16
+#define CONFIG_TERMINAL_PARAMETER_LENGTH			32
+#define CONFIG_TERMINAL_MAX_COMMANDS				32
+#define CONFIG_TERMINAL_COMMAND_MAX_PARAMETERS		16
+#define CONFIG_TERMINAL_INPUT_BUFFER_SIZE			256
+#define CONFIG_TERMINAL_OUTPUT_BUFFER_SIZE			512
+
+#define CONFIG_TERMINAL_COMMAND_EXECUTE_TIMEOUT		0
+
+#define CONFIG_MAX_QUEUE_SIZE						32
+
+#define CONFIG_MAX_FIFO_SIZE						32
+
+#define CONFIG_UART_FIFO_SIZE						32
+
+#define CONFIG_MAX_COMMAND_QUEUE_SIZE				16
+
+#define CONFIG_MAX_TASKS									16
+
+/*
+ * Acquisition defines
+ */
+#define CONFIG_NETWORK_ACQUISITION_MANAGE_PORT						6688
+#define CONFIG_NETWORK_ACQUISITION_TRANSMIT_PORT					(CONFIG_NETWORK_ACQUISITION_MANAGE_PORT + 1)
+#define CONFIG_NETWORK_ACQUISITION_DATA_TRANSMIT_SIZE			1400
+
+/*
+ * Spi device defines
+ */
+#define CONFIG_DEVICE_SPI_TX_BUFFER_SIZE				32
+#define CONFIG_DEVICE_SPI_RX_BUFFER_SIZE				32
+
+/*
+ * If using stm32f407
+ */
+#ifdef CONFIG_USING_STM32F407
+
+#define CONFIG_USING_FREERTOS
+#define CONFIG_USING_LWIP
+
+#define CONFIG_USING_FREERTOS_HEAP4
+
+#endif
+
+/*
+ * If using stm32f107
+ */
+#ifdef CONFIG_USING_STM32F107
+
+#define CONFIG_USING_FREERTOS
+
+#define CONFIG_USING_FREERTOS_HEAP2
+
+#define CONFIG_USING_FFLUSH
+
+#endif
+
+/*
+ * If using the general platform Linux,define with POSIX features.
+ */
+#ifdef CONFIG_USING_LINUX
+
+#define CONFIG_USING_POSIX_THREAD
+#define CONFIG_USING_POSIX_SOCKET
+
+#endif
+
+/*
+ * If using FreeRTOS,define system macros in this
+ */
+#ifdef CONFIG_USING_FREERTOS
+
+//#define CONFIG_FREERTOS_USING_MUTEX
+#define CONFIG_FREERTOS_MIN_STACK_SIZE						128
+
+#define CONFIG_FREERTOS_START_TASK_PRIORITY			1U
+
+#define CONFIG_FREERTOS_TICKS_PER_MILLISECONDS		((portTickType)1000/configTICK_RATE_HZ)
+
+#define CONFIG_FREERTOS_TOTAL_HEAP_SIZE				( size_t ) ( 20 * 1024 )
+
+#endif
+
+
+/*
+ * if using Lwip the mini tcp/ip protocol stack, define the blow macros
+ */
+#ifdef CONFIG_USING_LWIP
+
+#endif
+
+
+/*
+ * System login log configure
+ */
+#define CONFIG_PROJECT_NAME													"SE8001"
+#define CONFIG_PROJECT_DESCRIPTION									"Base controller for sweeping robot with slam"
+#define CONFIG_PROJECT_PLATFORM										"Seeing Slam Module"
+#define CONFIG_PROJECT_VERSION										"V0.0.1"
+
+#define CONFIG_COMMAND_LINE_PROMPT							CONFIG_PROJECT_NAME"@Seeing>"
+
+

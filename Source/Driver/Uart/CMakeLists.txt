@@ -1,0 +1,7 @@
+AUX_SOURCE_DIRECTORY(. UART_SRC)
+
+ADD_LIBRARY(uart 
+	${UART_SRC} 
+)
+
+

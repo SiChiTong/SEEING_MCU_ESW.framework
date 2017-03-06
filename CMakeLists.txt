@@ -1,0 +1,92 @@
+PROJECT(seeing_mcu_esw C)
+
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+ENABLE_LANGUAGE(ASM)
+
+#SET(CMSIS_STARTUP_SOURCE Source/Platform/Stm32f107/Startup/startup_stm32f4xx.s)
+#SET(STARTUP_PREFIX Source/Platform/Stm32f107/Startup)
+
+FIND_PACKAGE(CMSIS REQUIRED)
+FIND_PACKAGE(StdPeriphLib REQUIRED)
+
+# Select stm32f target device
+ADD_DEFINITIONS(-DSTM32F10X_HD) 
+ADD_DEFINITIONS(-D__GNUC__)
+#ADD_DEFINITIONS(-DMISSING_SYSCALL_NAME)
+#ADD_DEFINITIONS(-DREENTRANT_SYSCALL_PROVIDED)
+#ADD_DEFINITIONS(-D__VFP_FP__)
+
+#SET(CMAKE_VERBOSE_MAKEFILE on)
+
+#SET(PROJECT_PLATFORM_MIDDLEWARE_DIR Source/Platform/Stm32f107/Middleware)
+SET(PROJECT_PLATFORM_MANUFACTURER_DIR Source/Platform/Stm32f107/Manufacturer)
+#SET(PROJECT_LWIP_DIR Source/Middleware/LwipV141)
+SET(PROJECT_FREERTOS_DIR Source/System/FreeRtosV730)
+#SET(CMAKE_INCLUDE_PATH ${PROJECT_PLATFORM_MANUFACTURER_DIR})
+#SET(CMAKE_LIBRARY_PATH ${PROJECT_PLATFORM_MANUFACTURER_DIR})
+
+INCLUDE_DIRECTORIES(
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMSIS_INCLUDE_DIRS}
+	${StdPeriphLib_INCLUDE_DIR}
+	Source/Config
+	${PROJECT_PLATFORM_MANUFACTURER_DIR}
+#	${PROJECT_ETH_DRIVER_DIR}/inc
+#	${PROJECT_LWIP_DIR}
+#	${PROJECT_LWIP_DIR}/include
+#	${PROJECT_LWIP_DIR}/include/lwip
+#	${PROJECT_LWIP_DIR}/include/ipv4
+#	${PROJECT_LWIP_DIR}/include/netif
+#	${PROJECT_LWIP_DIR}/include/posix
+#	${PROJECT_PLATFORM_MIDDLEWARE_DIR}/Lwip
+	${PROJECT_FREERTOS_DIR}
+)
+
+ADD_SUBDIRECTORY(Source)
+
+SET(STM32_LINKER_SCRIPT ${CMSIS_LINKER_SCRIPT})
+
+SET(PROJECT_SOURCES
+	Source/Global/Startup.c
+	Source/Global/Initial.c
+	Source/User/Application.c
+	Source/User/Driver.c
+	Source/User/Applications/Registers.c
+	Source/User/Applications/Handles.c
+	Source/User/Applications/Motion.c
+	Source/User/Drivers/Encoder.c
+	Source/User/Drivers/Motor.c
+	Source/User/Applications/Odometry.c
+)
+
+
+
+ADD_EXECUTABLE(${CMAKE_PROJECT_NAME}  
+    ${PROJECT_SOURCES} 
+    ${CMSIS_STARTUP_SOURCE} 
+    ${CMSIS_SOURCES} 
+    ${StdPeriphLib_SOURCES} 
+  )
+
+TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME}
+	application
+#	analog
+	gadget
+	fpga
+#	i2c
+	spi
+	gpio
+	uart
+#	storage
+#	ethernet
+	common
+	stm32f107
+#	lwip
+	freertos
+)
+
+STM32_SET_TARGET_PROPERTIES(${CMAKE_PROJECT_NAME})
+STM32_ADD_HEX_BIN_TARGETS(${CMAKE_PROJECT_NAME})
+
+
+

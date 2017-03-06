@@ -1,0 +1,7 @@
+AUX_SOURCE_DIRECTORY(. GPIO_SRC)
+
+ADD_LIBRARY(gpio 
+	${GPIO_SRC} 
+)
+
+
