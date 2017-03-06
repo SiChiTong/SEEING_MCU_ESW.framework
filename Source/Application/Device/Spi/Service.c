@@ -238,6 +238,7 @@ SeInt8 SeSpiSlaveServiceRegisterHandle(SeUInt16 hAddress, SeSpiSlaveServiceHandl
 	{
 		if(pSpiServiceHandles[iCursor].blRegisted == SeFalse)
 		{
+			pSpiServiceHandles[iCursor].hAddress = hAddress;
 			pSpiServiceHandles[iCursor].cbServiceHandle = cbServiceHandle;
 			pSpiServiceHandles[iCursor].blRegisted = SeTrue;
 			blRegisted = SeTrue;
