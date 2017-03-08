@@ -34,7 +34,7 @@ void SeUserRegisterPidKdHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 nSize)
 
 void SeUserRegisterTicksPerMeterHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 nSize)
 {
-	SeInt32 fTicksPerMeter;
+	SeFloat fTicksPerMeter;
 	if(nSize == sizeof(SeFloat))
 		memcpy(&fTicksPerMeter, pData, nSize);
 	SeUserMotionSetTicksPerMeter(fTicksPerMeter);
@@ -42,7 +42,7 @@ void SeUserRegisterTicksPerMeterHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt1
 
 void SeUserRegisterWheelTrackHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 nSize)
 {
-	SeInt32 fWheelTrack;
+	SeFloat fWheelTrack;
 	if(nSize == sizeof(SeFloat))
 		memcpy(&fWheelTrack, pData, nSize);
 	SeUserMotionSetWheelTrack(fWheelTrack);
@@ -50,7 +50,7 @@ void SeUserRegisterWheelTrackHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 n
 
 void SeUserRegisterControlDurationHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 nSize)
 {
-	SeInt32 fControlDuration;
+	SeFloat fControlDuration;
 	if(nSize == sizeof(SeFloat))
 		memcpy(&fControlDuration, pData, nSize);
 	SeUserMotionSetControlDuration(fControlDuration);

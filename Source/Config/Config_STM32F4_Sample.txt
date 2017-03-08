@@ -45,6 +45,8 @@
 
 #define CONFIG_MAX_TASKS									16
 
+#define CONFIG_STDIN_TIMEOUT						50000
+
 /*
  * Acquisition defines
  */

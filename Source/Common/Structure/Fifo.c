@@ -50,7 +50,7 @@ SeBool SeFifoJudgeEmpty(SeFifo* pFifo)
 {
 	if(pFifo == SeNull)
 		return SeFalse;
-	if((pFifo->iFront == pFifo->iRear) && (pFifo->nSize == 0))
+	if(/*(pFifo->iFront == pFifo->iRear) && */(pFifo->nSize == 0))
 		return SeTrue;
 	return SeFalse;
 }
@@ -59,7 +59,7 @@ SeBool SeFifoJudgeFull(SeFifo* pFifo)
 {
 	if(pFifo == SeNull)
 		return SeTrue;
-	if((pFifo->iFront == pFifo->iRear) && (pFifo->nSize == pFifo->nCapacity))
+	if(/*(pFifo->iFront == pFifo->iRear) && */(pFifo->nSize == pFifo->nCapacity))
 		return SeTrue;
 	return SeFalse;
 }

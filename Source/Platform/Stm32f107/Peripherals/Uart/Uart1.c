@@ -70,8 +70,8 @@ SeInt8 SeStm32f107Uart1Init(SeUInt32 iBaudRate)
 	USART_Init(USART1, &USART_InitStructure);
 
 	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
 
@@ -90,7 +90,7 @@ SeInt8 SeStm32f107Uart1Init(SeUInt32 iBaudRate)
 
 	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
 
-	//USART_ClearFlag(USART1, USART_FLAG_TC);
+	USART_ClearFlag(USART1, USART_FLAG_TC);
 
 	return SE_RETURN_OK;
 }
@@ -107,7 +107,8 @@ SeInt8 SeStm32f107Uart1ReadByte(SeUInt8* bData)
 	if(SeFifoJudgeEmpty(pUart1RecvFifo) == SeTrue)
 	{
 		USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
-		return SE_RETURN_ERROR;
+		*bData = 0x00;
+		return SE_RETURN_TIMEOUT;
 	}else{
 		*bData = SeFifoPop(pUart1RecvFifo);
 	}

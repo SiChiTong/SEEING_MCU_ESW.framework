@@ -27,7 +27,7 @@ int __io_getchar(void)
 int _read (int file, char *ptr, int len)
 {
 	int DataIdx;
-
+	int Datalen = 0;
 	len = 1;
 
     switch(file)
@@ -36,10 +36,14 @@ int _read (int file, char *ptr, int len)
 			for (DataIdx = 0; DataIdx < len; DataIdx++)
 			{
 				int cInput = __io_getchar();
+				if(cInput == 0)
+					continue;
+
 				*ptr++ = cInput;
+				Datalen++;
 			}
 
-			return len;
+			return Datalen;
 		default:
 			return -1;
     }
@@ -148,7 +152,10 @@ SeChar SeGetCh(void)
 
 	if(pSeStdio->fpSeFgetc != SeNull)
 	{
-		pSeStdio->fpSeFgetc(&bGetChar);
+		if(pSeStdio->fpSeFgetc(&bGetChar) != SE_RETURN_OK)
+		{
+			return 0;
+		}
 	}
 
 	return bGetChar;
@@ -166,20 +173,47 @@ void SePrintf(SeConstString csFormat, ...)
 	fflush(stdout);
 #endif
 }
+*/
 
-void SeScanf(SeConstString csFormat, ...)
+SeInt8 SeScanf(SeConstString csFormat, ...)
 {
 	va_list vArgs;
+	SeInt32 nResult;
+	SeInt32 nGot = 0;
+	SeInt16 nIndex = 0;
+	SeChar sScanString[SE_BUFFER_SIZE_128] = {0};
 
-#ifdef CONFIG_USING_FFLUSH
-	fflush(stdin);
-#endif
+	for(nGot = 0; nGot < SE_BUFFER_SIZE_128; nGot++)
+	{
+		SeChar cInput = 0;
+		SeInt32 nRetry = STDIN_TIMEOUT;
+		while((cInput = SeGetCh()) == 0)
+		{
+			nRetry--;
+			if(nRetry == 0)
+				break;
+		}
+
+		if(nRetry == 0)
+		{
+			if(nGot == 0)
+			{
+				return SE_RETURN_TIMEOUT;
+			}else{
+				break;
+			}
+		}
+		sScanString[nIndex] = cInput;
+		nIndex++;
+	}
 
 	va_start(vArgs, csFormat);
-	scanf(csFormat, vArgs);
+	nResult = vsscanf(sScanString, csFormat, vArgs);
 	va_end(vArgs);
+
+	return SE_RETURN_OK;
 }
-*/
+
 
 void SeNormalPrint(SeConstString csFormat, ...)
 {
@@ -212,7 +246,7 @@ void SeErrorPrint(SeConstString csFormat, ...)
 
 	if(nResult >= 0)
 	{
-		SeTermPrintWithColor("Error", SeTermBackColorBlack, SeTermForeColorRed);
+		SeTermPrintWithColor("Error", SeTermForeColorWhite, SeTermBackColorRed);
 		printf(":[");
 		printf(sPrintString);
 		printf("]\r\n");
@@ -232,7 +266,7 @@ void SeDebugPrint(SeConstString csFormat, ...)
 
 	if(nResult >= 0)
 	{
-		SeTermPrintWithColor("Debug", SeTermBackColorBlack, SeTermForeColorGreen);
+		SeTermPrintWithColor("Debug", SeTermBackColorBlack, SeTermForeColorYellow);
 		printf(":[");
 		printf(sPrintString);
 		printf("]\r\n");

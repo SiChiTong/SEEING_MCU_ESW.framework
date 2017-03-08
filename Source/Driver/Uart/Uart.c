@@ -71,8 +71,15 @@ SeInt8 SeUartRead(SeInt8 iIndex, SeUInt8* pData, SeInt16 nRead, SeInt16* nReaded
 
 	while(*nReaded != nRead)
 	{
-		if(pOper->fpSeUartReadByte(pData + *nReaded) == SE_RETURN_ERROR)
-			break;
+		SeInt8 nResult;
+		nResult = pOper->fpSeUartReadByte(pData + *nReaded);
+		if(nResult == SE_RETURN_ERROR)
+		{
+			return SE_RETURN_ERROR;
+		}else if(nResult == SE_RETURN_TIMEOUT)
+		{
+			return SE_RETURN_TIMEOUT;
+		}
 		(*nReaded)++;
 	}
 

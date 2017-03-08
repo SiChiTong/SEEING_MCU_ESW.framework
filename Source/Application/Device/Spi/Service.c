@@ -208,7 +208,7 @@ SeInt8 SeSpiSlaveServiceInit(SeInt8 iSpiSlaveIndex, SeSpiSlaveDescription tSpiSl
 
 	SeSemaphoreCreate(&tSpiSlaveProcessSemaphore);
 
-	if(SeTaskAdd(&iSpiSlaveTaskIndex, SeSpiSlaveProcessTask, SeNull, SeTaskPriorityNormal, 1024) != SE_RETURN_OK)
+	if(SeTaskAdd(&iSpiSlaveTaskIndex, SeSpiSlaveProcessTask, SeNull, SeTaskPriorityHigher, SE_BUFFER_SIZE_1024) != SE_RETURN_OK)
 	{
 		SeErrorPrint("Create spi slave task failure!");
 		return SE_RETURN_ERROR;

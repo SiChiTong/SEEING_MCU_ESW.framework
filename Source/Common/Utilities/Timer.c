@@ -60,7 +60,7 @@ SeInt8 SeTimerInit(SeInt8 iIndex, SeTimer tTimer)
 
 	aGlobalTimers[iIndex] = tTimer;
 
-	SeDebugPrint("Create timer as %d seconds and %d microseconds.", tTimer.tInterval.iUtcSeconds, tTimer.tInterval.iMicroSeconds);
+	SeDebugPrint("Create timer as %lld seconds and %lld microseconds.", tTimer.tInterval.iUtcSeconds, tTimer.tInterval.iMicroSeconds);
 
 	return SE_RETURN_OK;
 }

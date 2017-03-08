@@ -107,9 +107,9 @@ SeInt8 SeUserDriverInit(void)
 	NVIC_SetVectorTable(((SeUInt32)0x08000000), 0);
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 
-	tUserUart1Oper.fpSeUartPreInit = SeUserUart1Init;
-	tUserUart1Oper.fpSeUartReadByte = SeUserUart1ReadByte;
-	tUserUart1Oper.fpSeUartWriteByte = SeUserUart1WriteByte;
+	tUserUart1Oper.fpSeUartPreInit = SeStm32f107Uart1Init;
+	tUserUart1Oper.fpSeUartReadByte = SeStm32f107Uart1ReadByte;
+	tUserUart1Oper.fpSeUartWriteByte = SeStm32f107Uart1WriteByte;
 
 	tUserUart1Desc.iBaudRate = 115200;
 	tUserUart1Desc.pOperation = &tUserUart1Oper;

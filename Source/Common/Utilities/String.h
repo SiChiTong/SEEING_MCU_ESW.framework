@@ -15,10 +15,19 @@
 extern "C" {
 #endif
 
+#ifndef CONFIG_STDIN_TIMEOUT
+#define STDIN_TIMEOUT 10000
+#else
+#define STDIN_TIMEOUT CONFIG_STDIN_TIMEOUT
+#endif
+
+
 /*
 void SePrintf(SeConstString csFormat, ...);
-void SeScanf(SeConstString csFormat, ...);
 */
+
+SeInt8 SeScanf(SeConstString csFormat, ...);
+
 
 #ifdef CONFIG_USING_FFLUSH
 #define USING_FFLUSH SeTrue
@@ -31,8 +40,9 @@ void SeScanf(SeConstString csFormat, ...);
 				printf(__VA_ARGS__);	\
 				if(USING_FFLUSH){	fflush(stdout);	}	\
 			}while(0)
-
+/*
 #define SeScanf scanf
+*/
 
 /*
  * character operation

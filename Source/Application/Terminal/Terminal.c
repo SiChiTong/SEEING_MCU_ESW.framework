@@ -89,6 +89,7 @@ SeInt8 SeTerminalProcess(void)
 
 void SeTerminalWelcome(void)
 {
+	SeDelayMs(100);
 	SeWelcomePrint();
 }
 
@@ -106,7 +107,7 @@ SeInt8 SeTerminalInit(void)
 {
 	SeInt8 iTermTaskIndex;
 
-	if(SeTaskAdd(&iTermTaskIndex, SeTerminalProcessTask, SeNull, SeTaskPriorityNormal, 1024) != SE_RETURN_OK)
+	if(SeTaskAdd(&iTermTaskIndex, SeTerminalProcessTask, SeNull, SeTaskPriorityNormal, SE_BUFFER_SIZE_1024) != SE_RETURN_OK)
 	{
 		SeErrorPrint("Create terminal task failure!");
 		return SE_RETURN_ERROR;

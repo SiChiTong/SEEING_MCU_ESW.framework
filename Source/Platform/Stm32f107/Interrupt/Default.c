@@ -52,7 +52,7 @@ void I2C2_EV_IRQHandler(void){SeStm32f107DefaultIsr();}
 void I2C2_ER_IRQHandler(void){SeStm32f107DefaultIsr();}
 void SPI1_IRQHandler(void){SeStm32f107DefaultIsr();}
 void SPI2_IRQHandler(void){SeStm32f107DefaultIsr();}
-void USART1_IRQHandler(void){SeStm32f107DefaultIsr();}
+//void USART1_IRQHandler(void){SeStm32f107DefaultIsr();}
 void USART2_IRQHandler(void){SeStm32f107DefaultIsr();}
 void USART3_IRQHandler(void){SeStm32f107DefaultIsr();}
 void EXTI15_10_IRQHandler(void){SeStm32f107DefaultIsr();}

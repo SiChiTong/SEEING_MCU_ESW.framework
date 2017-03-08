@@ -32,6 +32,8 @@ static SeFloat fControlDuration = 0;
 static SeFloat fBaseTicksPerMeter = 0;
 static SeFloat fBaseWheelTrack = 0;
 
+static SeSemaphoreType tMotionProcessSemaphore;
+
 static void SeUserMotionProc(void)
 {
 
@@ -70,29 +72,34 @@ static void SeUserEncSteady(void)
 
 void SeUserMotionSetPidKp(SeInt32 iKp)
 {
-	SeDebugPrint("Set kp :%d.", iKp);
+	SeDebugPrint("Set kp : %d.", iKp);
 }
+
 void SeUserMotionSetPidKi(SeInt32 iKi)
 {
-	SeDebugPrint("Set ki :%d.", iKi);
+	SeDebugPrint("Set ki : %d.", iKi);
 }
+
 void SeUserMotionSetPidKd(SeInt32 iKd)
 {
-	SeDebugPrint("Set kd :%d.", iKd);
+	SeDebugPrint("Set kd : %d.", iKd);
 }
+
 void SeUserMotionSetTicksPerMeter(SeFloat fTicksPerMeter)
 {
-	SeDebugPrint("Set ticks per meter :%d.", (SeInt32)fTicksPerMeter);
+	SeDebugPrint("Set ticks per meter : %f.", fTicksPerMeter);
 	fBaseTicksPerMeter = fTicksPerMeter;
 }
+
 void SeUserMotionSetWheelTrack(SeFloat fWheelTrack)
 {
-	SeDebugPrint("Set wheel track :%d.", (SeInt32)fWheelTrack);
+	SeDebugPrint("Set wheel track : %f.", fWheelTrack);
 	fBaseWheelTrack = fWheelTrack;
 }
+
 void SeUserMotionSetControlDuration(SeFloat fDuration)
 {
-	SeDebugPrint("Set duration :%d ms.", (SeInt32)(fDuration*1000));
+	SeDebugPrint("Set duration : %f s.", fDuration);
 	fControlDuration = fDuration;
 }
 
@@ -109,8 +116,8 @@ static SeTaskReturnType SeUserMotionTask(void* pArgument)
 	tMotionTimer.fpSeTimerPreInit = SeStm32f107Timer5Init;
 	tMotionTimer.fpSeTimerStart = SeStm32f107Timer5Start;
 	tMotionTimer.fpSeTimerStop = SeStm32f107Timer5Stop;
-	tMotionTimer.tInterval.iUtcSeconds = (SeUInt64)(fControlDuration*1000/1000);
-	tMotionTimer.tInterval.iMicroSeconds = ((SeUInt64)(fControlDuration*1000)%1000)*1000;
+	tMotionTimer.tInterval.iUtcSeconds = fControlDuration;
+	tMotionTimer.tInterval.iMicroSeconds = (fControlDuration - tMotionTimer.tInterval.iUtcSeconds)*1000000;
 	tMotionTimer.tCallback.fpSeTimerCallback = SeUserMotionProc;
 	if(SeTimerInit(SE_MOTION_TIMER_INDEX, tMotionTimer) != SE_RETURN_OK)
 	{
@@ -119,8 +126,6 @@ static SeTaskReturnType SeUserMotionTask(void* pArgument)
 	}
 
 	SeTimerStart(SE_MOTION_TIMER_INDEX);
-
-	SeDebugPrint("Motion process timer init ok!");
 
 	tOdomDesc.fDuration = fControlDuration;
 	tOdomDesc.fTicksPerMeter = fBaseTicksPerMeter;
@@ -135,7 +140,8 @@ static SeTaskReturnType SeUserMotionTask(void* pArgument)
 
 	while(SeTrue)
 	{
-		SeDelayMs(100);
+		//SeSemaphoreWait(tMotionProcessSemaphore, SE_SEMAPHORE_INFINITE_WAIT);
+		//SeDelayMs(100);
 	}
 }
 
@@ -158,6 +164,8 @@ SeInt8 SeUserMotionInit(void)
 		SeErrorPrint("PWM init failure!");
 		return SE_RETURN_ERROR;
 	}
+
+	SeSemaphoreCreate(&tMotionProcessSemaphore);
 
 	if(SeTaskAdd(&iMotionTaskIndex, SeUserMotionTask, SeNull, SeTaskPriorityNormal, 1024) != SE_RETURN_OK)
 	{

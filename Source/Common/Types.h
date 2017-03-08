@@ -56,8 +56,8 @@ typedef enum
 
 typedef struct
 {
-	SeUInt64 iUtcSeconds;
-	SeUInt64 iMicroSeconds;
+	SeInt64 iUtcSeconds;
+	SeInt64 iMicroSeconds;
 }SeTimeValue;
 
 /*

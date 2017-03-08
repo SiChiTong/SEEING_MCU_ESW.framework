@@ -74,7 +74,7 @@ SeInt8 SeTerminalMessageInit(SeTerminalMessageDescription* pTerminalMessageDescr
 	pTerminalMessageDescription->nTransmitBufferSize = CONFIG_TERMINAL_INPUT_BUFFER_SIZE;
 
 	SeInt8 iMessageTaskIndex;
-	if(SeTaskAdd(&iMessageTaskIndex, SeTerminalMessageProcessTask, pTerminalMessageDescription, SeTaskPriorityNormal, 512) != SE_RETURN_OK)
+	if(SeTaskAdd(&iMessageTaskIndex, SeTerminalMessageProcessTask, pTerminalMessageDescription, SeTaskPriorityNormal, SE_BUFFER_SIZE_512) != SE_RETURN_OK)
 	{
 		SeErrorPrint("Create terminal message process task fail!");
 		SeMemoryFree(pTerminalMessageDescription->pReceiveBuffer);
