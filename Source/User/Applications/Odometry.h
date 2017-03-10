@@ -13,7 +13,6 @@
 typedef struct {
 	SeFloat fTicksPerMeter;
 	SeFloat fWheelTrack;
-	SeFloat fDuration;
 }SeUserOdometryDescription;
 
 typedef struct {
@@ -24,7 +23,7 @@ typedef struct {
 
 SeInt8 SeUserOdometryInit(SeUserOdometryDescription tOdometryDescription);
 
-SeUserOdometry SeUserOdometryCalculate(SeUInt64 nLeftEncoderCount, SeUInt64 nRightEncoderCount);
+SeUserOdometry SeUserOdometryCalculate(SeUInt32 nLeftEncoderCount, SeUInt32 nRightEncoderCount);
 SeUserOdometry SeUserOdometryGetLast(void);
 
 #endif /* SOURCE_USER_APPLICATIONS_ODOMETRY_H_ */

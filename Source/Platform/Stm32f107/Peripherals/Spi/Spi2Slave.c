@@ -34,7 +34,7 @@ static void SeStm32f107Spi2SlaveTxConfig(void)
 	SPI_I2S_DMACmd(SPI2,SPI_CR2_TXDMAEN, ENABLE);
 
 	NVIC_InitStructure.NVIC_IRQChannel = DMA1_Channel5_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
@@ -67,8 +67,8 @@ static void SeStm32f107Spi2SlaveRxConfig(void)
 	SPI_I2S_DMACmd(SPI2,SPI_CR2_RXDMAEN, ENABLE);
 
 	NVIC_InitStructure.NVIC_IRQChannel = DMA1_Channel4_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
 

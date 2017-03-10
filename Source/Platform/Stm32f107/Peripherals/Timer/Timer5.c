@@ -42,8 +42,8 @@ SeInt8 SeStm32f107Timer5Init(SeTimeValue tInterval, SeTimerCallback tCallback)
 	TIM_DeInit(TIM5);
 
 	NVIC_InitStructure.NVIC_IRQChannel = TIM5_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 3;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
 

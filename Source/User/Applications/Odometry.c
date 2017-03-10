@@ -27,7 +27,7 @@ SeInt8 SeUserOdometryInit(SeUserOdometryDescription tOdometryDescription)
 	return SE_RETURN_OK;
 }
 
-SeUserOdometry SeUserOdometryCalculate(SeUInt64 nLeftEncoderDelta, SeUInt64 nRightEncoderDelta)
+SeUserOdometry SeUserOdometryCalculate(SeUInt32 nLeftEncoderDelta, SeUInt32 nRightEncoderDelta)
 {
 	SeUserOdometry tOdom;
 	SeFloat fDeltaRight, fDeltaLeft;

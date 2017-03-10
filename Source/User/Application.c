@@ -53,7 +53,9 @@ SeInt8 SeUserApplicationInit(void)
 	SeSpiSlaveServiceRegisterHandle(BASE_REG_PID_KD, SeUserRegisterPidKdHandle);
 	SeSpiSlaveServiceRegisterHandle(BASE_REG_DIST_PER_PULSE, SeUserRegisterTicksPerMeterHandle);
 	SeSpiSlaveServiceRegisterHandle(BASE_REG_WHEEL_TRACK, SeUserRegisterWheelTrackHandle);
-	SeSpiSlaveServiceRegisterHandle(BASE_REG_CNTL_DURATION, SeUserRegisterControlDurationHandle);
+	SeSpiSlaveServiceRegisterHandle(BASE_REG_TARGET_X, SeUserRegisterTargetXHandle);
+	SeSpiSlaveServiceRegisterHandle(BASE_REG_TARGET_Y, SeUserRegisterTargetYHandle);
+	SeSpiSlaveServiceRegisterHandle(BASE_REG_TARGET_THETA, SeUserRegisterTargetThetaHandle);
 
 	/*
 	 * Motion

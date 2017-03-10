@@ -48,10 +48,24 @@ void SeUserRegisterWheelTrackHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 n
 	SeUserMotionSetWheelTrack(fWheelTrack);
 }
 
-void SeUserRegisterControlDurationHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 nSize)
+void SeUserRegisterTargetXHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 nSize)
 {
-	SeFloat fControlDuration;
+	SeFloat fTargetX;
 	if(nSize == sizeof(SeFloat))
-		memcpy(&fControlDuration, pData, nSize);
-	SeUserMotionSetControlDuration(fControlDuration);
+		memcpy(&fTargetX, pData, nSize);
+
+}
+
+void SeUserRegisterTargetYHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 nSize)
+{
+	SeFloat fTargetY;
+	if(nSize == sizeof(SeFloat))
+		memcpy(&fTargetY, pData, nSize);
+}
+
+void SeUserRegisterTargetThetaHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 nSize)
+{
+	SeFloat fTargetTheta;
+	if(nSize == sizeof(SeFloat))
+		memcpy(&fTargetTheta, pData, nSize);
 }

@@ -13,30 +13,59 @@
 #include "Odometry.h"
 
 typedef struct {
-	SeUInt64 nEncode;
+	SeUInt32 nEncode;
 	SeUInt8 nPwmVal;
 	SeUserRollStates tState;
 }SeUserRollInfo;
 
 static SeUserRollInfo tLeftRollInfo, tRightRollInfo;
 
-typedef struct {
+static SeQueue* pTargetPoseQueue = SeNull;
 
-}SeUserMotionInfo;
+SeUserOdometry tNextOdom;
+SeUserOdometry tCurTarget;
+SeUserOdometry tCurOdom;
 
-typedef struct {
-
-}SeUserMotionDescription;
-
-static SeFloat fControlDuration = 0;
 static SeFloat fBaseTicksPerMeter = 0;
 static SeFloat fBaseWheelTrack = 0;
 
-static SeSemaphoreType tMotionProcessSemaphore;
+static SeFloat SeUserMotionCalcDist(SeUserOdometry tCurrent, SeUserOdometry tTarget)
+{
+	SeFloat fDy = tTarget.fY - tCurrent.fY;
+	SeFloat fDx = tTarget.fX - tCurrent.fX;
+	SeFloat fDist = sqrt(fDy*fDy + fDx*fDx);
+
+	return fDist;
+}
+
+static SeFloat SeUserMotionCalcTheta(SeUserOdometry tCurrent, SeUserOdometry tTarget)
+{
+	return (tTarget.fTheta - tCurrent.fTheta);
+}
 
 static void SeUserMotionProc(void)
 {
+	SeUInt32 nLeftCount = tLeftRollInfo.nEncode;
+	SeUInt32 nRightCount = tRightRollInfo.nEncode;
 
+	SeBool blArrived = SeFalse;
+
+	tLeftRollInfo.nEncode = 0;
+	tRightRollInfo.nEncode = 0;
+
+	tCurOdom = SeUserOdometryCalculate(nLeftCount, nRightCount);
+
+	/*
+	 * judge the target has arrived.
+	 */
+	if(!blArrived)
+	{
+		/*
+		tRightRollInfo.tState = SE_USER_ROLL_FORWARD;
+		tLeftRollInfo.tState = SE_USER_ROLL_FORWARD;
+		SeUserMotorSet(tLeftRollInfo.tState, 50, tRightRollInfo.tState, 50);
+		*/
+	}
 }
 
 static void SeUserRightEncTrig(void)
@@ -97,37 +126,33 @@ void SeUserMotionSetWheelTrack(SeFloat fWheelTrack)
 	fBaseWheelTrack = fWheelTrack;
 }
 
-void SeUserMotionSetControlDuration(SeFloat fDuration)
+void SeUserMotionSetTargetX(SeFloat fTargetX)
 {
-	SeDebugPrint("Set duration : %f s.", fDuration);
-	fControlDuration = fDuration;
+	SeDebugPrint("Set target x : %f.", fTargetX);
+	tNextOdom.fX = fTargetX;
+}
+
+void SeUserMotionSetTargetY(SeFloat fTargetY)
+{
+	SeDebugPrint("Set target y : %f.", fTargetY);
+	tNextOdom.fY = fTargetY;
+}
+
+void SeUserMotionSetTargetTheta(SeFloat fTargetTheta)
+{
+	SeDebugPrint("Set target theta : %f.", fTargetTheta);
+	tNextOdom.fTheta = fTargetTheta;
 }
 
 static SeTaskReturnType SeUserMotionTask(void* pArgument)
 {
-	SeTimer tMotionTimer;
 	SeUserOdometryDescription tOdomDesc;
 
-	while(fControlDuration == 0 || fBaseTicksPerMeter == 0 || fBaseWheelTrack == 0)
+	while(fBaseTicksPerMeter == 0 || fBaseWheelTrack == 0)
 	{
 		SeDelayMs(200);
 	}
 
-	tMotionTimer.fpSeTimerPreInit = SeStm32f107Timer5Init;
-	tMotionTimer.fpSeTimerStart = SeStm32f107Timer5Start;
-	tMotionTimer.fpSeTimerStop = SeStm32f107Timer5Stop;
-	tMotionTimer.tInterval.iUtcSeconds = fControlDuration;
-	tMotionTimer.tInterval.iMicroSeconds = (fControlDuration - tMotionTimer.tInterval.iUtcSeconds)*1000000;
-	tMotionTimer.tCallback.fpSeTimerCallback = SeUserMotionProc;
-	if(SeTimerInit(SE_MOTION_TIMER_INDEX, tMotionTimer) != SE_RETURN_OK)
-	{
-		SeErrorPrint("Motion timer init fail!");
-		return;
-	}
-
-	SeTimerStart(SE_MOTION_TIMER_INDEX);
-
-	tOdomDesc.fDuration = fControlDuration;
 	tOdomDesc.fTicksPerMeter = fBaseTicksPerMeter;
 	tOdomDesc.fWheelTrack = fBaseWheelTrack;
 	if(SeUserOdometryInit(tOdomDesc) != SE_RETURN_OK)
@@ -138,16 +163,20 @@ static SeTaskReturnType SeUserMotionTask(void* pArgument)
 
 	SeDebugPrint("Motion odometry init ok!");
 
+	SeHoldLinePrintStart();
 	while(SeTrue)
 	{
-		//SeSemaphoreWait(tMotionProcessSemaphore, SE_SEMAPHORE_INFINITE_WAIT);
-		//SeDelayMs(100);
+		SeUserOdometry tOdom = SeUserOdometryGetLast();
+		SeHoldLinePrint("Current x=%f, y=%f, theta=%f", tOdom.fX, tOdom.fY, tOdom.fTheta);
+		SeDelayMs(100);
 	}
+	SeHoldLinePrintFinish();
 }
 
 SeInt8 SeUserMotionInit(void)
 {
 	SeUserEncoderOperation tEncoderOper;
+	SeTimer tMotionTimer;
 	SeInt8 iMotionTaskIndex;
 
 	tEncoderOper.fpSeUserLeftEncoderTrigger = SeUserLeftEncTrig;
@@ -165,9 +194,23 @@ SeInt8 SeUserMotionInit(void)
 		return SE_RETURN_ERROR;
 	}
 
-	SeSemaphoreCreate(&tMotionProcessSemaphore);
+	tMotionTimer.fpSeTimerPreInit = SeStm32f107Timer5Init;
+	tMotionTimer.fpSeTimerStart = SeStm32f107Timer5Start;
+	tMotionTimer.fpSeTimerStop = SeStm32f107Timer5Stop;
+	tMotionTimer.tInterval.iUtcSeconds = 0;
+	tMotionTimer.tInterval.iMicroSeconds = CONTROL_DURATION_BY_MS*1000;
+	tMotionTimer.tCallback.fpSeTimerCallback = SeUserMotionProc;
+	if(SeTimerInit(SE_MOTION_TIMER_INDEX, tMotionTimer) != SE_RETURN_OK)
+	{
+		SeErrorPrint("Motion timer init fail!");
+		return SE_RETURN_ERROR;
+	}
 
-	if(SeTaskAdd(&iMotionTaskIndex, SeUserMotionTask, SeNull, SeTaskPriorityNormal, 1024) != SE_RETURN_OK)
+	SeTimerStart(SE_MOTION_TIMER_INDEX);
+	SeDebugPrint("Motion timer init ok!");
+
+
+	if(SeTaskAdd(&iMotionTaskIndex, SeUserMotionTask, SeNull, SeTaskPriorityNormal, SE_BUFFER_SIZE_1024) != SE_RETURN_OK)
 	{
 		SeErrorPrint("Create motion task failure!");
 		return SE_RETURN_ERROR;
