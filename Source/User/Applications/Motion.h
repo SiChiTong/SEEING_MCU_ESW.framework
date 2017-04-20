@@ -9,6 +9,7 @@
 #define _USER_APPLICATIONS_MOTION_H_
 
 #include "../../Global/Include.h"
+#include "../Drivers/Motor.h"
 
 #define CONTROL_DURATION_BY_MS 100
 
@@ -23,5 +24,7 @@ void SeUserMotionSetControlDuration(SeFloat fDuration);
 void SeUserMotionSetTargetX(SeFloat fTargetX);
 void SeUserMotionSetTargetY(SeFloat fTargetY);
 void SeUserMotionSetTargetTheta(SeFloat fTargetTheta);
+
+void SeUserMotionSetMotor(SeUserRollStates tLeftDir, SeInt8 nLeftPwmDuty, SeUserRollStates tRightDir, SeInt8 nRightPwmDuty);
 
 #endif /* SOURCE_USER_APPLICATIONS_MOTION_H_ */

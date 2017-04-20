@@ -225,9 +225,33 @@ Source/Common/CMakeFiles/common.dir/Utilities/Arithmetic.c.obj.provides: Source/
 Source/Common/CMakeFiles/common.dir/Utilities/Arithmetic.c.obj.provides.build: Source/Common/CMakeFiles/common.dir/Utilities/Arithmetic.c.obj
 
 
+Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj: Source/Common/CMakeFiles/common.dir/flags.make
+Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj: ../Source/Common/Utilities/Mutex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj"
+	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Common && /home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/common.dir/Utilities/Mutex.c.obj   -c /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.c
+
+Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/common.dir/Utilities/Mutex.c.i"
+	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Common && /home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.c > CMakeFiles/common.dir/Utilities/Mutex.c.i
+
+Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/common.dir/Utilities/Mutex.c.s"
+	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Common && /home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.c -o CMakeFiles/common.dir/Utilities/Mutex.c.s
+
+Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj.requires:
+
+.PHONY : Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj.requires
+
+Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj.provides: Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj.requires
+	$(MAKE) -f Source/Common/CMakeFiles/common.dir/build.make Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj.provides.build
+.PHONY : Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj.provides
+
+Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj.provides.build: Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj
+
+
 Source/Common/CMakeFiles/common.dir/Utilities/Delay.c.obj: Source/Common/CMakeFiles/common.dir/flags.make
 Source/Common/CMakeFiles/common.dir/Utilities/Delay.c.obj: ../Source/Common/Utilities/Delay.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object Source/Common/CMakeFiles/common.dir/Utilities/Delay.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object Source/Common/CMakeFiles/common.dir/Utilities/Delay.c.obj"
 	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Common && /home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/common.dir/Utilities/Delay.c.obj   -c /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.c
 
 Source/Common/CMakeFiles/common.dir/Utilities/Delay.c.i: cmake_force
@@ -251,7 +275,7 @@ Source/Common/CMakeFiles/common.dir/Utilities/Delay.c.obj.provides.build: Source
 
 Source/Common/CMakeFiles/common.dir/Utilities/Task.c.obj: Source/Common/CMakeFiles/common.dir/flags.make
 Source/Common/CMakeFiles/common.dir/Utilities/Task.c.obj: ../Source/Common/Utilities/Task.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object Source/Common/CMakeFiles/common.dir/Utilities/Task.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object Source/Common/CMakeFiles/common.dir/Utilities/Task.c.obj"
 	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Common && /home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/common.dir/Utilities/Task.c.obj   -c /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.c
 
 Source/Common/CMakeFiles/common.dir/Utilities/Task.c.i: cmake_force
@@ -275,7 +299,7 @@ Source/Common/CMakeFiles/common.dir/Utilities/Task.c.obj.provides.build: Source/
 
 Source/Common/CMakeFiles/common.dir/Utilities/String.c.obj: Source/Common/CMakeFiles/common.dir/flags.make
 Source/Common/CMakeFiles/common.dir/Utilities/String.c.obj: ../Source/Common/Utilities/String.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object Source/Common/CMakeFiles/common.dir/Utilities/String.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object Source/Common/CMakeFiles/common.dir/Utilities/String.c.obj"
 	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Common && /home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/common.dir/Utilities/String.c.obj   -c /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.c
 
 Source/Common/CMakeFiles/common.dir/Utilities/String.c.i: cmake_force
@@ -299,7 +323,7 @@ Source/Common/CMakeFiles/common.dir/Utilities/String.c.obj.provides.build: Sourc
 
 Source/Common/CMakeFiles/common.dir/Utilities/Convert.c.obj: Source/Common/CMakeFiles/common.dir/flags.make
 Source/Common/CMakeFiles/common.dir/Utilities/Convert.c.obj: ../Source/Common/Utilities/Convert.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object Source/Common/CMakeFiles/common.dir/Utilities/Convert.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object Source/Common/CMakeFiles/common.dir/Utilities/Convert.c.obj"
 	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Common && /home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/common.dir/Utilities/Convert.c.obj   -c /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Convert.c
 
 Source/Common/CMakeFiles/common.dir/Utilities/Convert.c.i: cmake_force
@@ -323,7 +347,7 @@ Source/Common/CMakeFiles/common.dir/Utilities/Convert.c.obj.provides.build: Sour
 
 Source/Common/CMakeFiles/common.dir/Utilities/Timer.c.obj: Source/Common/CMakeFiles/common.dir/flags.make
 Source/Common/CMakeFiles/common.dir/Utilities/Timer.c.obj: ../Source/Common/Utilities/Timer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object Source/Common/CMakeFiles/common.dir/Utilities/Timer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object Source/Common/CMakeFiles/common.dir/Utilities/Timer.c.obj"
 	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Common && /home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/common.dir/Utilities/Timer.c.obj   -c /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Timer.c
 
 Source/Common/CMakeFiles/common.dir/Utilities/Timer.c.i: cmake_force
@@ -347,7 +371,7 @@ Source/Common/CMakeFiles/common.dir/Utilities/Timer.c.obj.provides.build: Source
 
 Source/Common/CMakeFiles/common.dir/Utilities/Cursor.c.obj: Source/Common/CMakeFiles/common.dir/flags.make
 Source/Common/CMakeFiles/common.dir/Utilities/Cursor.c.obj: ../Source/Common/Utilities/Cursor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object Source/Common/CMakeFiles/common.dir/Utilities/Cursor.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object Source/Common/CMakeFiles/common.dir/Utilities/Cursor.c.obj"
 	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Common && /home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/common.dir/Utilities/Cursor.c.obj   -c /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.c
 
 Source/Common/CMakeFiles/common.dir/Utilities/Cursor.c.i: cmake_force
@@ -378,6 +402,7 @@ common_OBJECTS = \
 "CMakeFiles/common.dir/Utilities/Pid.c.obj" \
 "CMakeFiles/common.dir/Utilities/Semaphore.c.obj" \
 "CMakeFiles/common.dir/Utilities/Arithmetic.c.obj" \
+"CMakeFiles/common.dir/Utilities/Mutex.c.obj" \
 "CMakeFiles/common.dir/Utilities/Delay.c.obj" \
 "CMakeFiles/common.dir/Utilities/Task.c.obj" \
 "CMakeFiles/common.dir/Utilities/String.c.obj" \
@@ -395,6 +420,7 @@ Source/Common/libcommon.a: Source/Common/CMakeFiles/common.dir/Utilities/Memory.
 Source/Common/libcommon.a: Source/Common/CMakeFiles/common.dir/Utilities/Pid.c.obj
 Source/Common/libcommon.a: Source/Common/CMakeFiles/common.dir/Utilities/Semaphore.c.obj
 Source/Common/libcommon.a: Source/Common/CMakeFiles/common.dir/Utilities/Arithmetic.c.obj
+Source/Common/libcommon.a: Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj
 Source/Common/libcommon.a: Source/Common/CMakeFiles/common.dir/Utilities/Delay.c.obj
 Source/Common/libcommon.a: Source/Common/CMakeFiles/common.dir/Utilities/Task.c.obj
 Source/Common/libcommon.a: Source/Common/CMakeFiles/common.dir/Utilities/String.c.obj
@@ -403,7 +429,7 @@ Source/Common/libcommon.a: Source/Common/CMakeFiles/common.dir/Utilities/Timer.c
 Source/Common/libcommon.a: Source/Common/CMakeFiles/common.dir/Utilities/Cursor.c.obj
 Source/Common/libcommon.a: Source/Common/CMakeFiles/common.dir/build.make
 Source/Common/libcommon.a: Source/Common/CMakeFiles/common.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C static library libcommon.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C static library libcommon.a"
 	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Common && $(CMAKE_COMMAND) -P CMakeFiles/common.dir/cmake_clean_target.cmake
 	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Common && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/common.dir/link.txt --verbose=$(VERBOSE)
 
@@ -419,6 +445,7 @@ Source/Common/CMakeFiles/common.dir/requires: Source/Common/CMakeFiles/common.di
 Source/Common/CMakeFiles/common.dir/requires: Source/Common/CMakeFiles/common.dir/Utilities/Pid.c.obj.requires
 Source/Common/CMakeFiles/common.dir/requires: Source/Common/CMakeFiles/common.dir/Utilities/Semaphore.c.obj.requires
 Source/Common/CMakeFiles/common.dir/requires: Source/Common/CMakeFiles/common.dir/Utilities/Arithmetic.c.obj.requires
+Source/Common/CMakeFiles/common.dir/requires: Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj.requires
 Source/Common/CMakeFiles/common.dir/requires: Source/Common/CMakeFiles/common.dir/Utilities/Delay.c.obj.requires
 Source/Common/CMakeFiles/common.dir/requires: Source/Common/CMakeFiles/common.dir/Utilities/Task.c.obj.requires
 Source/Common/CMakeFiles/common.dir/requires: Source/Common/CMakeFiles/common.dir/Utilities/String.c.obj.requires

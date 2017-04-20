@@ -67,6 +67,7 @@ Source/Driver/Gpio/CMakeFiles/gpio.dir/Gpio.c.obj: ../Source/Common/Utilities/Co
 Source/Driver/Gpio/CMakeFiles/gpio.dir/Gpio.c.obj: ../Source/Common/Utilities/Cursor.h
 Source/Driver/Gpio/CMakeFiles/gpio.dir/Gpio.c.obj: ../Source/Common/Utilities/Delay.h
 Source/Driver/Gpio/CMakeFiles/gpio.dir/Gpio.c.obj: ../Source/Common/Utilities/Memory.h
+Source/Driver/Gpio/CMakeFiles/gpio.dir/Gpio.c.obj: ../Source/Common/Utilities/Mutex.h
 Source/Driver/Gpio/CMakeFiles/gpio.dir/Gpio.c.obj: ../Source/Common/Utilities/Semaphore.h
 Source/Driver/Gpio/CMakeFiles/gpio.dir/Gpio.c.obj: ../Source/Common/Utilities/String.h
 Source/Driver/Gpio/CMakeFiles/gpio.dir/Gpio.c.obj: ../Source/Common/Utilities/Task.h

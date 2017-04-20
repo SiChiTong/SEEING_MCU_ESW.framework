@@ -39,6 +39,7 @@ typedef struct {
 }__attribute__((packed)) SeDeviceSpiCommRepHead;
 
 static SeSemaphoreType tSpiSlaveProcessSemaphore;
+static SeMutexType tSpiSlaveRegMutex;
 static SeUInt8* pSpiSlaveServiceSpace = SeNull;
 static SeUInt8 *pTxBuffer = SeNull, *pRxBuffer = SeNull;
 
@@ -52,12 +53,16 @@ static SeDeviceSpiHandleInfo pSpiServiceHandles[CONFIG_MAX_SPI_SLAVE_REGISTERS] 
 
 void SeSpiSlaveGetRegister(SeUInt16 hAddress, SeUInt8* pData, SeUInt16 nSize)
 {
+	SeMutexLock(tSpiSlaveRegMutex);
 	memcpy(pData, pSpiSlaveServiceSpace + hAddress, nSize);
+	SeMutexUnlock(tSpiSlaveRegMutex);
 }
 
 void SeSpiSlaveSetRegister(SeUInt16 hAddress, SeUInt8* pData, SeUInt16 nSize)
 {
+	SeMutexLock(tSpiSlaveRegMutex);
 	memcpy(pSpiSlaveServiceSpace + hAddress, pData, nSize);
+	SeMutexUnlock(tSpiSlaveRegMutex);
 }
 
 static void SeSpiSlaveReceiveRequest(SeUInt8* pRequestData, SeInt16 nRequestLength)
@@ -207,6 +212,8 @@ SeInt8 SeSpiSlaveServiceInit(SeInt8 iSpiSlaveIndex, SeSpiSlaveDescription tSpiSl
 	}
 
 	SeSemaphoreCreate(&tSpiSlaveProcessSemaphore);
+
+	tSpiSlaveRegMutex = SeMutexCreate();
 
 	if(SeTaskAdd(&iSpiSlaveTaskIndex, SeSpiSlaveProcessTask, SeNull, SeTaskPriorityHigher, SE_BUFFER_SIZE_1024) != SE_RETURN_OK)
 	{

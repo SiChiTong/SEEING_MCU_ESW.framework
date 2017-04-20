@@ -7,6 +7,7 @@
 
 #include "Handles.h"
 #include "../Drivers/Motor.h"
+#include "Motion.h"
 
 SeInt8 SeUserSetMotorSpeedHandle(SeLinkList* pParameterList, SeString sResult)
 {
@@ -45,6 +46,6 @@ SeInt8 SeUserSetMotorSpeedHandle(SeLinkList* pParameterList, SeString sResult)
 		}
 	}
 
-	SeUserMotorSet(tLeftRollState, nLeftPwmVal, tRightRollState, nRightPwmVal);
+	SeUserMotionSetMotor(tLeftRollState, nLeftPwmVal, tRightRollState, nRightPwmVal);
 	return SE_RETURN_OK;
 }

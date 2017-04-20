@@ -9,8 +9,8 @@
 #include "../Descriptions.h"
 #include "../../Platform/Stm32f107/Stm32f10x.h"
 #include "../Drivers/Encoder.h"
-#include "../Drivers/Motor.h"
 #include "Odometry.h"
+#include "Registers.h"
 
 typedef struct {
 	SeUInt32 nEncode;
@@ -53,7 +53,18 @@ static void SeUserMotionProc(void)
 	tLeftRollInfo.nEncode = 0;
 	tRightRollInfo.nEncode = 0;
 
-	tCurOdom = SeUserOdometryCalculate(nLeftCount, nRightCount);
+	if(nLeftCount != 0 && nRightCount != 0)
+	{
+		//SeDebugPrint("Left=%d,Right=%d", nLeftCount, nRightCount);
+		tCurOdom = SeUserOdometryCalculate(nLeftCount, nRightCount);
+	}
+
+	/*
+	 * synchronize to register
+	 */
+	SeSpiSlaveSetRegister(BASE_REG_ODOM_X, &tCurOdom.fX, sizeof(SeFloat));
+	SeSpiSlaveSetRegister(BASE_REG_ODOM_Y, &tCurOdom.fY, sizeof(SeFloat));
+	SeSpiSlaveSetRegister(BASE_REG_ODOM_THETA, &tCurOdom.fTheta, sizeof(SeFloat));
 
 	/*
 	 * judge the target has arrived.
@@ -144,9 +155,34 @@ void SeUserMotionSetTargetTheta(SeFloat fTargetTheta)
 	tNextOdom.fTheta = fTargetTheta;
 }
 
+void SeUserMotionSetMotor(SeUserRollStates tLeftDir, SeInt8 nLeftPwmDuty, SeUserRollStates tRightDir, SeInt8 nRightPwmDuty)
+{
+	tLeftRollInfo.tState = tLeftDir;
+	tRightRollInfo.tState = tRightDir;
+
+	if(tRightRollInfo.tState == SE_USER_ROLL_FORWARD)
+	{
+		SeDebugPrint("Right roll set forward!");
+	}else if(tRightRollInfo.tState == SE_USER_ROLL_BACKWARD)
+	{
+		SeDebugPrint("Right roll set backward!");
+	}
+
+	if(tLeftRollInfo.tState == SE_USER_ROLL_FORWARD)
+	{
+		SeDebugPrint("Left roll set forward!");
+	}else if(tLeftRollInfo.tState == SE_USER_ROLL_BACKWARD)
+	{
+		SeDebugPrint("Left roll set backward!");
+	}
+
+	SeUserMotorSet(tLeftDir, nLeftPwmDuty, tRightDir, nRightPwmDuty);
+}
+
 static SeTaskReturnType SeUserMotionTask(void* pArgument)
 {
 	SeUserOdometryDescription tOdomDesc;
+	SeTimer tMotionTimer;
 
 	while(fBaseTicksPerMeter == 0 || fBaseWheelTrack == 0)
 	{
@@ -160,24 +196,33 @@ static SeTaskReturnType SeUserMotionTask(void* pArgument)
 		SeErrorPrint("Motion odometry init fail!");
 		return;
 	}
-
-	SeDebugPrint("Motion odometry init ok!");
-
-	SeHoldLinePrintStart();
+/*
+	tMotionTimer.fpSeTimerPreInit = SeStm32f107Timer5Init;
+	tMotionTimer.fpSeTimerStart = SeStm32f107Timer5Start;
+	tMotionTimer.fpSeTimerStop = SeStm32f107Timer5Stop;
+	tMotionTimer.tInterval.iUtcSeconds = 0;
+	tMotionTimer.tInterval.iMicroSeconds = CONTROL_DURATION_BY_MS*1000;
+	tMotionTimer.tCallback.fpSeTimerCallback = SeUserMotionProc;
+	if(SeTimerInit(SE_MOTION_TIMER_INDEX, tMotionTimer) != SE_RETURN_OK)
+	{
+		SeErrorPrint("Motion timer init fail!");
+		return;
+	}
+	SeTimerStart(SE_MOTION_TIMER_INDEX);
+	SeDebugPrint("Motion timer init ok!");
+*/
 	while(SeTrue)
 	{
-		SeUserOdometry tOdom = SeUserOdometryGetLast();
-		SeHoldLinePrint("Current x=%f, y=%f, theta=%f", tOdom.fX, tOdom.fY, tOdom.fTheta);
+		SeUserMotionProc();
+		//SeDebugPrint("x = %f, y = %f, theta = %f", tCurOdom.fX, tCurOdom.fY, tCurOdom.fTheta);
 		SeDelayMs(100);
 	}
-	SeHoldLinePrintFinish();
 }
 
 SeInt8 SeUserMotionInit(void)
 {
-	SeUserEncoderOperation tEncoderOper;
-	SeTimer tMotionTimer;
 	SeInt8 iMotionTaskIndex;
+	SeUserEncoderOperation tEncoderOper;
 
 	tEncoderOper.fpSeUserLeftEncoderTrigger = SeUserLeftEncTrig;
 	tEncoderOper.fpSeUserRightEncoderTrigger = SeUserRightEncTrig;
@@ -193,22 +238,6 @@ SeInt8 SeUserMotionInit(void)
 		SeErrorPrint("PWM init failure!");
 		return SE_RETURN_ERROR;
 	}
-
-	tMotionTimer.fpSeTimerPreInit = SeStm32f107Timer5Init;
-	tMotionTimer.fpSeTimerStart = SeStm32f107Timer5Start;
-	tMotionTimer.fpSeTimerStop = SeStm32f107Timer5Stop;
-	tMotionTimer.tInterval.iUtcSeconds = 0;
-	tMotionTimer.tInterval.iMicroSeconds = CONTROL_DURATION_BY_MS*1000;
-	tMotionTimer.tCallback.fpSeTimerCallback = SeUserMotionProc;
-	if(SeTimerInit(SE_MOTION_TIMER_INDEX, tMotionTimer) != SE_RETURN_OK)
-	{
-		SeErrorPrint("Motion timer init fail!");
-		return SE_RETURN_ERROR;
-	}
-
-	SeTimerStart(SE_MOTION_TIMER_INDEX);
-	SeDebugPrint("Motion timer init ok!");
-
 
 	if(SeTaskAdd(&iMotionTaskIndex, SeUserMotionTask, SeNull, SeTaskPriorityNormal, SE_BUFFER_SIZE_1024) != SE_RETURN_OK)
 	{

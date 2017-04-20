@@ -67,6 +67,7 @@ Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Interrupt/Default.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
@@ -182,6 +183,7 @@ Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Spi/Spi2Slave.c.o
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
@@ -279,6 +281,7 @@ Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Timer/Timer5.c.ob
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
@@ -376,6 +379,7 @@ Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Uart/Uart1.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h

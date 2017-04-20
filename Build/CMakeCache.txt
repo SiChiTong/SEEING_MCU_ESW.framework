@@ -198,6 +198,9 @@ seeing_mcu_esw_BINARY_DIR:STATIC=/home/seeing/workspace/SEEING_MCU_ESW.framework
 seeing_mcu_esw_SOURCE_DIR:STATIC=/home/seeing/workspace/SEEING_MCU_ESW.framework
 
 //Dependencies for target
+sensor_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
 spi_LIB_DEPENDS:STATIC=
 
 //Dependencies for the target
@@ -324,7 +327,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //objcopy tool
 CMAKE_OBJCOPY:INTERNAL=/home/seeing/stm32-toolchain/gcc-arm/gcc-arm-none-eabi-4_9-2015q3/bin/arm-none-eabi-objcopy
 //objdump tool

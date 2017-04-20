@@ -30,9 +30,6 @@ SeInt8 SeUserApplicationInit(void)
 		return SE_RETURN_ERROR;
 	}
 
-	/*
-	 * register command
-	 */
 	SeRegisterCommand("help", SeHelpHandle);
 	SeRegisterCommand("motor_spd", SeUserSetMotorSpeedHandle);
 
@@ -48,6 +45,7 @@ SeInt8 SeUserApplicationInit(void)
 	/*
 	 * registers
 	 */
+	SeSpiSlaveServiceRegisterHandle(BASE_REG_TEST, SeUserRegisterTestHandle);
 	SeSpiSlaveServiceRegisterHandle(BASE_REG_PID_KP, SeUserRegisterPidKpHandle);
 	SeSpiSlaveServiceRegisterHandle(BASE_REG_PID_KI, SeUserRegisterPidKiHandle);
 	SeSpiSlaveServiceRegisterHandle(BASE_REG_PID_KD, SeUserRegisterPidKdHandle);

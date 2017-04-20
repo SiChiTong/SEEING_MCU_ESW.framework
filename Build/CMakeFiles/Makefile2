@@ -74,7 +74,7 @@ CMakeFiles/seeing_mcu_esw.dir/all: Source/Platform/Stm32f107/CMakeFiles/stm32f10
 CMakeFiles/seeing_mcu_esw.dir/all: Source/System/CMakeFiles/freertos.dir/all
 	$(MAKE) -f CMakeFiles/seeing_mcu_esw.dir/build.make CMakeFiles/seeing_mcu_esw.dir/depend
 	$(MAKE) -f CMakeFiles/seeing_mcu_esw.dir/build.make CMakeFiles/seeing_mcu_esw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89 "Built target seeing_mcu_esw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88 "Built target seeing_mcu_esw"
 .PHONY : CMakeFiles/seeing_mcu_esw.dir/all
 
 # Include target in all.
@@ -84,7 +84,7 @@ all: CMakeFiles/seeing_mcu_esw.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/seeing_mcu_esw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 61
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 60
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/seeing_mcu_esw.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 0
 .PHONY : CMakeFiles/seeing_mcu_esw.dir/rule
@@ -116,7 +116,7 @@ CMakeFiles/seeing_mcu_esw.bin.dir/all: CMakeFiles/seeing_mcu_esw.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/seeing_mcu_esw.bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 61
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 60
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/seeing_mcu_esw.bin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 0
 .PHONY : CMakeFiles/seeing_mcu_esw.bin.dir/rule
@@ -148,7 +148,7 @@ CMakeFiles/seeing_mcu_esw.hex.dir/all: CMakeFiles/seeing_mcu_esw.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/seeing_mcu_esw.hex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 61
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 60
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/seeing_mcu_esw.hex.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 0
 .PHONY : CMakeFiles/seeing_mcu_esw.hex.dir/rule
@@ -237,7 +237,7 @@ all: Source/Application/CMakeFiles/application.dir/all
 
 # Build rule for subdir invocation for target.
 Source/Application/CMakeFiles/application.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 Source/Application/CMakeFiles/application.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 0
 .PHONY : Source/Application/CMakeFiles/application.dir/rule
@@ -292,7 +292,7 @@ all: Source/Common/CMakeFiles/common.dir/all
 
 # Build rule for subdir invocation for target.
 Source/Common/CMakeFiles/common.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 Source/Common/CMakeFiles/common.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 0
 .PHONY : Source/Common/CMakeFiles/common.dir/rule
@@ -355,6 +355,7 @@ Source/Driver/preinstall: Source/Driver/Ethernet/preinstall
 Source/Driver/Chip/all: Source/Driver/Chip/Analog/all
 Source/Driver/Chip/all: Source/Driver/Chip/Gadget/all
 Source/Driver/Chip/all: Source/Driver/Chip/Storage/all
+Source/Driver/Chip/all: Source/Driver/Chip/Sensor/all
 
 .PHONY : Source/Driver/Chip/all
 
@@ -362,6 +363,7 @@ Source/Driver/Chip/all: Source/Driver/Chip/Storage/all
 Source/Driver/Chip/clean: Source/Driver/Chip/Analog/clean
 Source/Driver/Chip/clean: Source/Driver/Chip/Gadget/clean
 Source/Driver/Chip/clean: Source/Driver/Chip/Storage/clean
+Source/Driver/Chip/clean: Source/Driver/Chip/Sensor/clean
 
 .PHONY : Source/Driver/Chip/clean
 
@@ -369,6 +371,7 @@ Source/Driver/Chip/clean: Source/Driver/Chip/Storage/clean
 Source/Driver/Chip/preinstall: Source/Driver/Chip/Analog/preinstall
 Source/Driver/Chip/preinstall: Source/Driver/Chip/Gadget/preinstall
 Source/Driver/Chip/preinstall: Source/Driver/Chip/Storage/preinstall
+Source/Driver/Chip/preinstall: Source/Driver/Chip/Sensor/preinstall
 
 .PHONY : Source/Driver/Chip/preinstall
 
@@ -538,6 +541,61 @@ clean: Source/Driver/Chip/Storage/CMakeFiles/storage.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory Source/Driver/Chip/Sensor
+
+# Convenience name for "all" pass in the directory.
+Source/Driver/Chip/Sensor/all: Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/all
+
+.PHONY : Source/Driver/Chip/Sensor/all
+
+# Convenience name for "clean" pass in the directory.
+Source/Driver/Chip/Sensor/clean: Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/clean
+
+.PHONY : Source/Driver/Chip/Sensor/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Source/Driver/Chip/Sensor/preinstall:
+
+.PHONY : Source/Driver/Chip/Sensor/preinstall
+
+#=============================================================================
+# Target rules for target Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir
+
+# All Build rule for target.
+Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/all:
+	$(MAKE) -f Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/build.make Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/depend
+	$(MAKE) -f Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/build.make Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=89 "Built target sensor"
+.PHONY : Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/all
+
+# Include target in all.
+all: Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 0
+.PHONY : Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/rule
+
+# Convenience name for target.
+sensor: Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/rule
+
+.PHONY : sensor
+
+# clean rule for target.
+Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/clean:
+	$(MAKE) -f Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/build.make Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/clean
+.PHONY : Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/clean
+
+# clean rule for target.
+clean: Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory Source/Driver/Fpga
 
 # Convenience name for "all" pass in the directory.
@@ -562,7 +620,7 @@ Source/Driver/Fpga/preinstall:
 Source/Driver/Fpga/CMakeFiles/fpga.dir/all:
 	$(MAKE) -f Source/Driver/Fpga/CMakeFiles/fpga.dir/build.make Source/Driver/Fpga/CMakeFiles/fpga.dir/depend
 	$(MAKE) -f Source/Driver/Fpga/CMakeFiles/fpga.dir/build.make Source/Driver/Fpga/CMakeFiles/fpga.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=24 "Built target fpga"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=24,25 "Built target fpga"
 .PHONY : Source/Driver/Fpga/CMakeFiles/fpga.dir/all
 
 # Include target in all.
@@ -572,7 +630,7 @@ all: Source/Driver/Fpga/CMakeFiles/fpga.dir/all
 
 # Build rule for subdir invocation for target.
 Source/Driver/Fpga/CMakeFiles/fpga.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 Source/Driver/Fpga/CMakeFiles/fpga.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 0
 .PHONY : Source/Driver/Fpga/CMakeFiles/fpga.dir/rule
@@ -994,7 +1052,7 @@ all: Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/all
 
 # Build rule for subdir invocation for target.
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 19
 	$(MAKE) -f CMakeFiles/Makefile2 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 0
 .PHONY : Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/rule
@@ -1039,7 +1097,7 @@ Source/System/preinstall:
 Source/System/CMakeFiles/freertos.dir/all:
 	$(MAKE) -f Source/System/CMakeFiles/freertos.dir/build.make Source/System/CMakeFiles/freertos.dir/depend
 	$(MAKE) -f Source/System/CMakeFiles/freertos.dir/build.make Source/System/CMakeFiles/freertos.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=25,26,27,28,29,30,31,32 "Built target freertos"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles --progress-num=26,27,28,29,30,31,32 "Built target freertos"
 .PHONY : Source/System/CMakeFiles/freertos.dir/all
 
 # Include target in all.
@@ -1049,7 +1107,7 @@ all: Source/System/CMakeFiles/freertos.dir/all
 
 # Build rule for subdir invocation for target.
 Source/System/CMakeFiles/freertos.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 Source/System/CMakeFiles/freertos.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seeing/workspace/SEEING_MCU_ESW.framework/Build/CMakeFiles 0
 .PHONY : Source/System/CMakeFiles/freertos.dir/rule

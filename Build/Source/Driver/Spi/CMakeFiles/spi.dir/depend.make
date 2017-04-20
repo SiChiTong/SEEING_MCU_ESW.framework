@@ -67,6 +67,7 @@ Source/Driver/Spi/CMakeFiles/spi.dir/Internal.c.obj: ../Source/Common/Utilities/
 Source/Driver/Spi/CMakeFiles/spi.dir/Internal.c.obj: ../Source/Common/Utilities/Cursor.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Internal.c.obj: ../Source/Common/Utilities/Delay.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Internal.c.obj: ../Source/Common/Utilities/Memory.h
+Source/Driver/Spi/CMakeFiles/spi.dir/Internal.c.obj: ../Source/Common/Utilities/Mutex.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Internal.c.obj: ../Source/Common/Utilities/Semaphore.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Internal.c.obj: ../Source/Common/Utilities/String.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Internal.c.obj: ../Source/Common/Utilities/Task.h
@@ -163,6 +164,7 @@ Source/Driver/Spi/CMakeFiles/spi.dir/Quad.c.obj: ../Source/Common/Utilities/Conv
 Source/Driver/Spi/CMakeFiles/spi.dir/Quad.c.obj: ../Source/Common/Utilities/Cursor.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Quad.c.obj: ../Source/Common/Utilities/Delay.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Quad.c.obj: ../Source/Common/Utilities/Memory.h
+Source/Driver/Spi/CMakeFiles/spi.dir/Quad.c.obj: ../Source/Common/Utilities/Mutex.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Quad.c.obj: ../Source/Common/Utilities/Semaphore.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Quad.c.obj: ../Source/Common/Utilities/String.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Quad.c.obj: ../Source/Common/Utilities/Task.h
@@ -259,6 +261,7 @@ Source/Driver/Spi/CMakeFiles/spi.dir/Simulate.c.obj: ../Source/Common/Utilities/
 Source/Driver/Spi/CMakeFiles/spi.dir/Simulate.c.obj: ../Source/Common/Utilities/Cursor.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Simulate.c.obj: ../Source/Common/Utilities/Delay.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Simulate.c.obj: ../Source/Common/Utilities/Memory.h
+Source/Driver/Spi/CMakeFiles/spi.dir/Simulate.c.obj: ../Source/Common/Utilities/Mutex.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Simulate.c.obj: ../Source/Common/Utilities/Semaphore.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Simulate.c.obj: ../Source/Common/Utilities/String.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Simulate.c.obj: ../Source/Common/Utilities/Task.h
@@ -355,6 +358,7 @@ Source/Driver/Spi/CMakeFiles/spi.dir/Slave.c.obj: ../Source/Common/Utilities/Con
 Source/Driver/Spi/CMakeFiles/spi.dir/Slave.c.obj: ../Source/Common/Utilities/Cursor.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Slave.c.obj: ../Source/Common/Utilities/Delay.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Slave.c.obj: ../Source/Common/Utilities/Memory.h
+Source/Driver/Spi/CMakeFiles/spi.dir/Slave.c.obj: ../Source/Common/Utilities/Mutex.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Slave.c.obj: ../Source/Common/Utilities/Semaphore.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Slave.c.obj: ../Source/Common/Utilities/String.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Slave.c.obj: ../Source/Common/Utilities/Task.h
@@ -451,6 +455,7 @@ Source/Driver/Spi/CMakeFiles/spi.dir/Spi.c.obj: ../Source/Common/Utilities/Conve
 Source/Driver/Spi/CMakeFiles/spi.dir/Spi.c.obj: ../Source/Common/Utilities/Cursor.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Spi.c.obj: ../Source/Common/Utilities/Delay.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Spi.c.obj: ../Source/Common/Utilities/Memory.h
+Source/Driver/Spi/CMakeFiles/spi.dir/Spi.c.obj: ../Source/Common/Utilities/Mutex.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Spi.c.obj: ../Source/Common/Utilities/Semaphore.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Spi.c.obj: ../Source/Common/Utilities/String.h
 Source/Driver/Spi/CMakeFiles/spi.dir/Spi.c.obj: ../Source/Common/Utilities/Task.h

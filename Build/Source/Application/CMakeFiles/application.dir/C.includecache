@@ -100,6 +100,16 @@
 ../../Global/Include.h
 ../Source/Global/Include.h
 
+../Source/Common/Utilities/Mutex.h
+../../Global/Include.h
+../Source/Global/Include.h
+../System/System.h
+../Source/Common/System/System.h
+pthread.h
+-
+semaphore.h
+-
+
 ../Source/Common/Utilities/Semaphore.h
 ../../Global/Include.h
 ../Source/Global/Include.h
@@ -183,6 +193,8 @@ Config_STM32F1_SE8001_Base.txt
 ../Source/Common/Utilities/Task.h
 ../Common/Utilities/Semaphore.h
 ../Source/Common/Utilities/Semaphore.h
+../Common/Utilities/Mutex.h
+../Source/Common/Utilities/Mutex.h
 ../Common/Structure/List.h
 ../Source/Common/Structure/List.h
 ../Common/Structure/Queue.h
@@ -962,6 +974,16 @@ Update.h
 ../../Global/Include.h
 /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Global/Include.h
 
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
+../../Global/Include.h
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Global/Include.h
+../System/System.h
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/System/System.h
+pthread.h
+-
+semaphore.h
+-
+
 /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
 ../../Global/Include.h
 /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Global/Include.h
@@ -1045,6 +1067,8 @@ Config_STM32F1_SE8001_Base.txt
 /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
 ../Common/Utilities/Semaphore.h
 /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
+../Common/Utilities/Mutex.h
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
 ../Common/Structure/List.h
 /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Structure/List.h
 ../Common/Structure/Queue.h

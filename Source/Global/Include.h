@@ -34,6 +34,8 @@
 
 #include "../Common/Utilities/Semaphore.h"
 
+#include "../Common/Utilities/Mutex.h"
+
 #include "../Common/Structure/List.h"
 
 #include "../Common/Structure/Queue.h"

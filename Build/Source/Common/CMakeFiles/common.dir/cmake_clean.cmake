@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/common.dir/Utilities/Pid.c.obj"
   "CMakeFiles/common.dir/Utilities/Semaphore.c.obj"
   "CMakeFiles/common.dir/Utilities/Arithmetic.c.obj"
+  "CMakeFiles/common.dir/Utilities/Mutex.c.obj"
   "CMakeFiles/common.dir/Utilities/Delay.c.obj"
   "CMakeFiles/common.dir/Utilities/Task.c.obj"
   "CMakeFiles/common.dir/Utilities/String.c.obj"

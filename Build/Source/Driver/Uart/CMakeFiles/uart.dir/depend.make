@@ -67,6 +67,7 @@ Source/Driver/Uart/CMakeFiles/uart.dir/Uart.c.obj: ../Source/Common/Utilities/Co
 Source/Driver/Uart/CMakeFiles/uart.dir/Uart.c.obj: ../Source/Common/Utilities/Cursor.h
 Source/Driver/Uart/CMakeFiles/uart.dir/Uart.c.obj: ../Source/Common/Utilities/Delay.h
 Source/Driver/Uart/CMakeFiles/uart.dir/Uart.c.obj: ../Source/Common/Utilities/Memory.h
+Source/Driver/Uart/CMakeFiles/uart.dir/Uart.c.obj: ../Source/Common/Utilities/Mutex.h
 Source/Driver/Uart/CMakeFiles/uart.dir/Uart.c.obj: ../Source/Common/Utilities/Semaphore.h
 Source/Driver/Uart/CMakeFiles/uart.dir/Uart.c.obj: ../Source/Common/Utilities/String.h
 Source/Driver/Uart/CMakeFiles/uart.dir/Uart.c.obj: ../Source/Common/Utilities/Task.h

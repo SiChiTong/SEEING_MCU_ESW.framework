@@ -70,6 +70,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/Global/Initial.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
@@ -166,6 +167,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/Global/Startup.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
@@ -260,6 +262,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
@@ -299,6 +302,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Applications/Motion.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Applications/Registers.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Descriptions.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Drivers/Motor.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj
  ../Source/Config/Config.h
  ../Source/Global/Include.h
@@ -366,6 +370,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
@@ -395,6 +400,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Platform/Stm32f407/Peripherals/Flash/Flash.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Applications/Handles.c
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Applications/Handles.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Applications/Motion.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Drivers/Motor.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj
  ../Source/Config/Config.h
@@ -462,6 +468,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
@@ -498,6 +505,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Applications/Motion.c
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Applications/Motion.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Applications/Odometry.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Applications/Registers.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Descriptions.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Drivers/Encoder.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Drivers/Motor.h
@@ -568,6 +576,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Odometry.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
@@ -664,6 +673,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
@@ -694,6 +704,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Applications/Motion.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Applications/Registers.c
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Applications/Registers.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/User/Drivers/Motor.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Driver.c.obj
  ../Source/Config/Config.h
  ../Source/Platform/Stm32f107/Manufacturer/stm32f10x_conf.h
@@ -760,6 +771,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Driver.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
@@ -864,6 +876,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Encoder.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
@@ -965,6 +978,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Motor.c.obj
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Cursor.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Delay.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Memory.h
+ /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/String.h
  /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h

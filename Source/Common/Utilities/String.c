@@ -276,7 +276,7 @@ void SeDebugPrint(SeConstString csFormat, ...)
 void SeDataPrint(SeConstString csTitle, SeUInt8* pData, SeUInt16 nLength)
 {
 	SeUInt16 iCursor;
-	printf("%s,Data Position:0x%0x,Length:%d\r\n", csTitle, pData, nLength);
+	printf("%s, Data Position:0x%0x, Length:%d\r\n", csTitle, pData, nLength);
 	for(iCursor = 0; iCursor < nLength; iCursor++)
 	{
 		printf(" 0x%02X ", *(pData + iCursor));

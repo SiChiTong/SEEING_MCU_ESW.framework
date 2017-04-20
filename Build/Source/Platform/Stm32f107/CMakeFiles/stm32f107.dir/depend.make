@@ -66,6 +66,7 @@ Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Interrupt/Default.c.obj: ../S
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Interrupt/Default.c.obj: ../Source/Common/Utilities/Cursor.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Interrupt/Default.c.obj: ../Source/Common/Utilities/Delay.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Interrupt/Default.c.obj: ../Source/Common/Utilities/Memory.h
+Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Interrupt/Default.c.obj: ../Source/Common/Utilities/Mutex.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Interrupt/Default.c.obj: ../Source/Common/Utilities/Semaphore.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Interrupt/Default.c.obj: ../Source/Common/Utilities/String.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Interrupt/Default.c.obj: ../Source/Common/Utilities/Task.h
@@ -181,6 +182,7 @@ Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Spi/Spi2Slave.c.o
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Spi/Spi2Slave.c.obj: ../Source/Common/Utilities/Cursor.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Spi/Spi2Slave.c.obj: ../Source/Common/Utilities/Delay.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Spi/Spi2Slave.c.obj: ../Source/Common/Utilities/Memory.h
+Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Spi/Spi2Slave.c.obj: ../Source/Common/Utilities/Mutex.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Spi/Spi2Slave.c.obj: ../Source/Common/Utilities/Semaphore.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Spi/Spi2Slave.c.obj: ../Source/Common/Utilities/String.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Spi/Spi2Slave.c.obj: ../Source/Common/Utilities/Task.h
@@ -278,6 +280,7 @@ Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Timer/Timer5.c.ob
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Timer/Timer5.c.obj: ../Source/Common/Utilities/Cursor.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Timer/Timer5.c.obj: ../Source/Common/Utilities/Delay.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Timer/Timer5.c.obj: ../Source/Common/Utilities/Memory.h
+Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Timer/Timer5.c.obj: ../Source/Common/Utilities/Mutex.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Timer/Timer5.c.obj: ../Source/Common/Utilities/Semaphore.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Timer/Timer5.c.obj: ../Source/Common/Utilities/String.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Timer/Timer5.c.obj: ../Source/Common/Utilities/Task.h
@@ -375,6 +378,7 @@ Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Uart/Uart1.c.obj:
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Uart/Uart1.c.obj: ../Source/Common/Utilities/Cursor.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Uart/Uart1.c.obj: ../Source/Common/Utilities/Delay.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Uart/Uart1.c.obj: ../Source/Common/Utilities/Memory.h
+Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Uart/Uart1.c.obj: ../Source/Common/Utilities/Mutex.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Uart/Uart1.c.obj: ../Source/Common/Utilities/Semaphore.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Uart/Uart1.c.obj: ../Source/Common/Utilities/String.h
 Source/Platform/Stm32f107/CMakeFiles/stm32f107.dir/Peripherals/Uart/Uart1.c.obj: ../Source/Common/Utilities/Task.h

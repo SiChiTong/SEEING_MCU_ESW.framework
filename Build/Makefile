@@ -215,6 +215,19 @@ storage/fast:
 .PHONY : storage/fast
 
 #=============================================================================
+# Target rules for targets named sensor
+
+# Build rule for target.
+sensor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor
+.PHONY : sensor
+
+# fast build rule for target.
+sensor/fast:
+	$(MAKE) -f Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/build.make Source/Driver/Chip/Sensor/CMakeFiles/sensor.dir/build
+.PHONY : sensor/fast
+
+#=============================================================================
 # Target rules for targets named fpga
 
 # Build rule for target.
@@ -1274,6 +1287,7 @@ help:
 	@echo "... analog"
 	@echo "... gadget"
 	@echo "... storage"
+	@echo "... sensor"
 	@echo "... fpga"
 	@echo "... gpio"
 	@echo "... i2c"

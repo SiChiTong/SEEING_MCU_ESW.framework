@@ -32,6 +32,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Driver/Chip/Analog/cmake_install.cmake")
   include("/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Driver/Chip/Gadget/cmake_install.cmake")
   include("/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Driver/Chip/Storage/cmake_install.cmake")
+  include("/home/seeing/workspace/SEEING_MCU_ESW.framework/Build/Source/Driver/Chip/Sensor/cmake_install.cmake")
 
 endif()
 

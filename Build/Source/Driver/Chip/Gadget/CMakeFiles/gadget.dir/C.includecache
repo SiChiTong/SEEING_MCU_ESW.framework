@@ -442,6 +442,16 @@ stm32f10x.h
 ../../Global/Include.h
 /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Global/Include.h
 
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
+../../Global/Include.h
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Global/Include.h
+../System/System.h
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/System/System.h
+pthread.h
+-
+semaphore.h
+-
+
 /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
 ../../Global/Include.h
 /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Global/Include.h
@@ -541,6 +551,8 @@ Tca9548.h
 /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Task.h
 ../Common/Utilities/Semaphore.h
 /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Semaphore.h
+../Common/Utilities/Mutex.h
+/home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Utilities/Mutex.h
 ../Common/Structure/List.h
 /home/seeing/workspace/SEEING_MCU_ESW.framework/Source/Common/Structure/List.h
 ../Common/Structure/Queue.h

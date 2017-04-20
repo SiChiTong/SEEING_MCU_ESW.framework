@@ -69,6 +69,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/Global/Initial.c.obj: ../Source/Common/Util
 CMakeFiles/seeing_mcu_esw.dir/Source/Global/Initial.c.obj: ../Source/Common/Utilities/Cursor.h
 CMakeFiles/seeing_mcu_esw.dir/Source/Global/Initial.c.obj: ../Source/Common/Utilities/Delay.h
 CMakeFiles/seeing_mcu_esw.dir/Source/Global/Initial.c.obj: ../Source/Common/Utilities/Memory.h
+CMakeFiles/seeing_mcu_esw.dir/Source/Global/Initial.c.obj: ../Source/Common/Utilities/Mutex.h
 CMakeFiles/seeing_mcu_esw.dir/Source/Global/Initial.c.obj: ../Source/Common/Utilities/Semaphore.h
 CMakeFiles/seeing_mcu_esw.dir/Source/Global/Initial.c.obj: ../Source/Common/Utilities/String.h
 CMakeFiles/seeing_mcu_esw.dir/Source/Global/Initial.c.obj: ../Source/Common/Utilities/Task.h
@@ -165,6 +166,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/Global/Startup.c.obj: ../Source/Common/Util
 CMakeFiles/seeing_mcu_esw.dir/Source/Global/Startup.c.obj: ../Source/Common/Utilities/Cursor.h
 CMakeFiles/seeing_mcu_esw.dir/Source/Global/Startup.c.obj: ../Source/Common/Utilities/Delay.h
 CMakeFiles/seeing_mcu_esw.dir/Source/Global/Startup.c.obj: ../Source/Common/Utilities/Memory.h
+CMakeFiles/seeing_mcu_esw.dir/Source/Global/Startup.c.obj: ../Source/Common/Utilities/Mutex.h
 CMakeFiles/seeing_mcu_esw.dir/Source/Global/Startup.c.obj: ../Source/Common/Utilities/Semaphore.h
 CMakeFiles/seeing_mcu_esw.dir/Source/Global/Startup.c.obj: ../Source/Common/Utilities/String.h
 CMakeFiles/seeing_mcu_esw.dir/Source/Global/Startup.c.obj: ../Source/Common/Utilities/Task.h
@@ -259,6 +261,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj: ../Source/Common/Ut
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj: ../Source/Common/Utilities/Cursor.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj: ../Source/Common/Utilities/Delay.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj: ../Source/Common/Utilities/Memory.h
+CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj: ../Source/Common/Utilities/Mutex.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj: ../Source/Common/Utilities/Semaphore.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj: ../Source/Common/Utilities/String.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj: ../Source/Common/Utilities/Task.h
@@ -298,6 +301,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj: ../Source/User/Appl
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj: ../Source/User/Applications/Motion.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj: ../Source/User/Applications/Registers.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj: ../Source/User/Descriptions.h
+CMakeFiles/seeing_mcu_esw.dir/Source/User/Application.c.obj: ../Source/User/Drivers/Motor.h
 
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/Config/Config.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/Global/Include.h
@@ -365,6 +369,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/Common/Utilities/Cursor.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/Common/Utilities/Delay.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/Common/Utilities/Memory.h
+CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/Common/Utilities/Mutex.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/Common/Utilities/Semaphore.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/Common/Utilities/String.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/Common/Utilities/Task.h
@@ -394,6 +399,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/Platform/Stm32f407/Peripherals/Flash/Flash.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/User/Applications/Handles.c
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/User/Applications/Handles.h
+CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/User/Applications/Motion.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Handles.c.obj: ../Source/User/Drivers/Motor.h
 
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/Config/Config.h
@@ -461,6 +467,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/C
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/Common/Utilities/Cursor.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/Common/Utilities/Delay.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/Common/Utilities/Memory.h
+CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/Common/Utilities/Mutex.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/Common/Utilities/Semaphore.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/Common/Utilities/String.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/Common/Utilities/Task.h
@@ -497,6 +504,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/P
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/User/Applications/Motion.c
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/User/Applications/Motion.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/User/Applications/Odometry.h
+CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/User/Applications/Registers.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/User/Descriptions.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/User/Drivers/Encoder.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Motion.c.obj: ../Source/User/Drivers/Motor.h
@@ -567,6 +575,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Odometry.c.obj: ../Source
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Odometry.c.obj: ../Source/Common/Utilities/Cursor.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Odometry.c.obj: ../Source/Common/Utilities/Delay.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Odometry.c.obj: ../Source/Common/Utilities/Memory.h
+CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Odometry.c.obj: ../Source/Common/Utilities/Mutex.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Odometry.c.obj: ../Source/Common/Utilities/Semaphore.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Odometry.c.obj: ../Source/Common/Utilities/String.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Odometry.c.obj: ../Source/Common/Utilities/Task.h
@@ -663,6 +672,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj: ../Sourc
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj: ../Source/Common/Utilities/Cursor.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj: ../Source/Common/Utilities/Delay.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj: ../Source/Common/Utilities/Memory.h
+CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj: ../Source/Common/Utilities/Mutex.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj: ../Source/Common/Utilities/Semaphore.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj: ../Source/Common/Utilities/String.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj: ../Source/Common/Utilities/Task.h
@@ -693,6 +703,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj: ../Sourc
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj: ../Source/User/Applications/Motion.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj: ../Source/User/Applications/Registers.c
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj: ../Source/User/Applications/Registers.h
+CMakeFiles/seeing_mcu_esw.dir/Source/User/Applications/Registers.c.obj: ../Source/User/Drivers/Motor.h
 
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Driver.c.obj: ../Source/Config/Config.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Driver.c.obj: ../Source/Platform/Stm32f107/Manufacturer/stm32f10x_conf.h
@@ -759,6 +770,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Driver.c.obj: ../Source/Common/Utiliti
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Driver.c.obj: ../Source/Common/Utilities/Cursor.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Driver.c.obj: ../Source/Common/Utilities/Delay.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Driver.c.obj: ../Source/Common/Utilities/Memory.h
+CMakeFiles/seeing_mcu_esw.dir/Source/User/Driver.c.obj: ../Source/Common/Utilities/Mutex.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Driver.c.obj: ../Source/Common/Utilities/Semaphore.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Driver.c.obj: ../Source/Common/Utilities/String.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Driver.c.obj: ../Source/Common/Utilities/Task.h
@@ -863,6 +875,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Encoder.c.obj: ../Source/Commo
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Encoder.c.obj: ../Source/Common/Utilities/Cursor.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Encoder.c.obj: ../Source/Common/Utilities/Delay.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Encoder.c.obj: ../Source/Common/Utilities/Memory.h
+CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Encoder.c.obj: ../Source/Common/Utilities/Mutex.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Encoder.c.obj: ../Source/Common/Utilities/Semaphore.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Encoder.c.obj: ../Source/Common/Utilities/String.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Encoder.c.obj: ../Source/Common/Utilities/Task.h
@@ -964,6 +977,7 @@ CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Motor.c.obj: ../Source/Common/
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Motor.c.obj: ../Source/Common/Utilities/Cursor.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Motor.c.obj: ../Source/Common/Utilities/Delay.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Motor.c.obj: ../Source/Common/Utilities/Memory.h
+CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Motor.c.obj: ../Source/Common/Utilities/Mutex.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Motor.c.obj: ../Source/Common/Utilities/Semaphore.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Motor.c.obj: ../Source/Common/Utilities/String.h
 CMakeFiles/seeing_mcu_esw.dir/Source/User/Drivers/Motor.c.obj: ../Source/Common/Utilities/Task.h

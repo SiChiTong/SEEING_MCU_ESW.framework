@@ -341,6 +341,33 @@ Utilities/Memory.c.s:
 	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build && $(MAKE) -f Source/Common/CMakeFiles/common.dir/build.make Source/Common/CMakeFiles/common.dir/Utilities/Memory.c.s
 .PHONY : Utilities/Memory.c.s
 
+Utilities/Mutex.obj: Utilities/Mutex.c.obj
+
+.PHONY : Utilities/Mutex.obj
+
+# target to build an object file
+Utilities/Mutex.c.obj:
+	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build && $(MAKE) -f Source/Common/CMakeFiles/common.dir/build.make Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.obj
+.PHONY : Utilities/Mutex.c.obj
+
+Utilities/Mutex.i: Utilities/Mutex.c.i
+
+.PHONY : Utilities/Mutex.i
+
+# target to preprocess a source file
+Utilities/Mutex.c.i:
+	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build && $(MAKE) -f Source/Common/CMakeFiles/common.dir/build.make Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.i
+.PHONY : Utilities/Mutex.c.i
+
+Utilities/Mutex.s: Utilities/Mutex.c.s
+
+.PHONY : Utilities/Mutex.s
+
+# target to generate assembly for a file
+Utilities/Mutex.c.s:
+	cd /home/seeing/workspace/SEEING_MCU_ESW.framework/Build && $(MAKE) -f Source/Common/CMakeFiles/common.dir/build.make Source/Common/CMakeFiles/common.dir/Utilities/Mutex.c.s
+.PHONY : Utilities/Mutex.c.s
+
 Utilities/Pid.obj: Utilities/Pid.c.obj
 
 .PHONY : Utilities/Pid.obj
@@ -509,6 +536,9 @@ help:
 	@echo "... Utilities/Memory.obj"
 	@echo "... Utilities/Memory.i"
 	@echo "... Utilities/Memory.s"
+	@echo "... Utilities/Mutex.obj"
+	@echo "... Utilities/Mutex.i"
+	@echo "... Utilities/Mutex.s"
 	@echo "... Utilities/Pid.obj"
 	@echo "... Utilities/Pid.i"
 	@echo "... Utilities/Pid.s"

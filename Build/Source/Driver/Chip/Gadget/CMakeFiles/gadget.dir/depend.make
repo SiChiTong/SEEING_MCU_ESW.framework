@@ -66,6 +66,7 @@ Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Cat9555.c.obj: ../Source/Common/
 Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Cat9555.c.obj: ../Source/Common/Utilities/Cursor.h
 Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Cat9555.c.obj: ../Source/Common/Utilities/Delay.h
 Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Cat9555.c.obj: ../Source/Common/Utilities/Memory.h
+Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Cat9555.c.obj: ../Source/Common/Utilities/Mutex.h
 Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Cat9555.c.obj: ../Source/Common/Utilities/Semaphore.h
 Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Cat9555.c.obj: ../Source/Common/Utilities/String.h
 Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Cat9555.c.obj: ../Source/Common/Utilities/Task.h
@@ -161,6 +162,7 @@ Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Tca9548.c.obj: ../Source/Common/
 Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Tca9548.c.obj: ../Source/Common/Utilities/Cursor.h
 Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Tca9548.c.obj: ../Source/Common/Utilities/Delay.h
 Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Tca9548.c.obj: ../Source/Common/Utilities/Memory.h
+Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Tca9548.c.obj: ../Source/Common/Utilities/Mutex.h
 Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Tca9548.c.obj: ../Source/Common/Utilities/Semaphore.h
 Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Tca9548.c.obj: ../Source/Common/Utilities/String.h
 Source/Driver/Chip/Gadget/CMakeFiles/gadget.dir/Tca9548.c.obj: ../Source/Common/Utilities/Task.h

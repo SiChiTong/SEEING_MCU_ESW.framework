@@ -8,6 +8,14 @@
 #include "Registers.h"
 #include "Motion.h"
 
+void SeUserRegisterTestHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 nSize)
+{
+	SeInt32 hTestCode;
+	if(nSize == sizeof(SeInt32))
+		memcpy(&hTestCode, pData, nSize);
+	SeSpiSlaveSetRegister(BASE_REG_TEST, hTestCode, sizeof(SeInt32));
+}
+
 void SeUserRegisterPidKpHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 nSize)
 {
 	SeInt32 iKp;
@@ -53,7 +61,6 @@ void SeUserRegisterTargetXHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 nSiz
 	SeFloat fTargetX;
 	if(nSize == sizeof(SeFloat))
 		memcpy(&fTargetX, pData, nSize);
-
 }
 
 void SeUserRegisterTargetYHandle(SeUInt16 hAddress, SeUInt8* pData, SeInt16 nSize)
